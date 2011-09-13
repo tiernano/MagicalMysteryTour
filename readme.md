@@ -10,6 +10,13 @@ Why?
 ----
 God only knows... Something to do i suppose...
 
+How?
+----
+At the moment, i dont know, but i hope that [DotLiquid][4] will help... Also, some sort of [YAML][5] parser will be needed. some links available [here][6]
+
 [1]: https://github.com/tiernano/MagicalMysteryTour
 [2]: http://jekyllrb.com/
 [3]: https://github.com/mojombo/jekyll/wiki/blog-migrations
+[4]: http://dotliquidmarkup.org/
+[5]: http://yaml.org/
+[6]: http://stackoverflow.com/questions/42071/net-yaml-library
