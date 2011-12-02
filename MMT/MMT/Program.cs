@@ -13,22 +13,34 @@ namespace MMT
         static void Main(string[] args)
         {
             //read index file...
-            
-            string indexFileName = "index.html";
-            string postsFolder = "_posts";
-            string layoutFolder = "_layouts";
-
-            if (!File.Exists(indexFileName) || !Directory.Exists(postsFolder) || !Directory.Exists(layoutFolder))
+            if (args.Count() < 1)
             {
-                Console.WriteLine("woops!");
+                Console.WriteLine("not enough arguments");
+                return;
             }
             else
             {
-                Template index = Template.Parse(File.ReadAllText(indexFileName));
-                
-                //find posts
-                //get template for posts
-                //
+                string indexFileName = Path.Combine(args[0], "index.html");
+                string postsFolder = Path.Combine(args[0], "_posts");
+                string layoutFolder = Path.Combine(args[0], "_layouts");
+
+                if (!File.Exists(indexFileName) || !Directory.Exists(postsFolder) || !Directory.Exists(layoutFolder))
+                {
+                    Console.WriteLine("woops!");
+                }
+                else
+                {
+                    Template index = Template.Parse(File.ReadAllText(indexFileName));
+
+                    //find posts
+                    foreach (string post in Directory.GetFiles(postsFolder))
+                    {
+
+                    }
+
+
+                    //
+                }
             }
         }
     }
